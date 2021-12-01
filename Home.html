@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Website </title>
+        <link rel="stylesheet" href="Home.css">
+    </head>
+        <body onload="slider()">
+            <div class="banner">
+                <div class="slider">
+                    <img src="Images/img1.jpg" id="slideImg">
+                </div>
+                <div class="overlay">
+                    <div class="navbar">
+                        <div class="logo">
+                                <img src="Images/Me1.png"/>
+                        </div>
+                        <div class="menu-icons">
+                            <a href="Home.html">
+                                <img src="Images/Home.png"/></a>
+                            <a href="About.html">
+                                <img src="Images/About me.png"/></a>
+                            <a href="Contact.html">
+                                <img src="Images/Contact.png"/></a>
+                            <a href="Games.html">
+                                <img src="Images/Games.png"/></a>
+                            <a href="Event Place.html">
+                                <img src="Images/Event Place.png"/></a>
+                            <a href="Fave.html">
+                                <img src="Images/Favorites.png"/></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h1>Hello It's Me Von</h1>
+                        <h3>Know more about me through my website</h3>
+                        <div>
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">
+                                <button type="button">Click this</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <script>
+                    var slideImg = document.getElementById("slideImg");
+
+                    var Images = new Array(
+                        "Images/img1.jpg",
+                        "Images/img2.jpg",
+                        "Images/img3.jpg",
+                        "Images/img4.jpg"
+                    );
+
+                    var len = Images.length;
+                    var i = 0;
+
+                    function slider(){
+                        if(i > len-1){
+                            i = 0;
+                        }
+                        slideImg.src = Images[i]
+                        i++;
+                        setTimeout('slider()',4000);
+
+                    }
+                    
+
+                </script>
+
+            
+        </body>
+</html>
